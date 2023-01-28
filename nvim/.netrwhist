@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/devjare/.config/i3status'
+let g:netrw_dirhist_2='/home/devjare/.oh-my-zsh/themes'
+let g:netrw_dirhist_1='/home/devjare/.oh-my-zsh'

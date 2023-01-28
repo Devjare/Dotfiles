@@ -1,0 +1,13 @@
+*
+!*.gitignore
+!*/
+!i3/*
+!i3status/*
+!alacritty/*
+!nvim/*
+!picom/*
+!rofi/*
+!spotify/*
+!spotifyd/*
+!systemd/*
+!zathura/*
