@@ -1,3 +1,4 @@
+# Ignore everything but my folders of interest
 *
 !*.gitignore
 !*/
