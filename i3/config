@@ -193,7 +193,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id feh --bg-fill ~/Pictures/TokyoBeauty.jpg
-exec --no-startup-id picom -b -f --config ~/.config/picom/picom.conf & # For alacritty opacity
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf -b
 
 # I3-GAPS CONFIG
 gaps inner 2
