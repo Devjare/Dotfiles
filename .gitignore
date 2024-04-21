@@ -1,10 +1,12 @@
+# Ignore everything but my folders of interest
 *
 !*.gitignore
 !*/
 !i3/*
 !i3status/*
 !alacritty/*
-!nvim/*
+!kitty/*
+!nvim/**/**/*.lua
 !picom/*
 !rofi/*
 !spotify/*

@@ -7,12 +7,12 @@ general {
         color_bad = "#ff2200"
 }
 
-order += "wireless wlp2s0"
-order += "ethernet enp1s0"
+order += "wireless wlan0"
+order += "ethernet enp0s31f6"
 order += "disk /"
 order += "memory"
 order += "cpu_usage"
-order += "battery 1"
+order += "battery 0"
 order += "load"
 order += "time"
 order += "volume master"
@@ -23,17 +23,17 @@ cpu_usage {
 	degraded_threshold = 25
 }
 
-wireless wlp2s0 {
+wireless wlan0 {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
         format_down = "W: down"
 }
 
-ethernet enp1s0 {
+ethernet enp0s31f6 {
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
 
-battery 1 {
+battery 0 {
         format = "%status %percentage %remaining %emptytime"
         format_down = "No battery"
         status_chr = "⚡ CHR"
@@ -56,20 +56,20 @@ load {
 }
 
 memory {
-        format = " %available (%used) / %total"
+        format = " %available (%used) / %total"
         threshold_degraded = 20%
         threshold_critical = 10%
         format_degraded = "MEMORY: %free"
 }
 
 disk "/" {
-        format = " %avail"
+        format = "󱛟 %avail"
         prefix_type = custom
 }
 
 volume "master" {
         format = ": %volume"
-        format_muted = "婢: (%volume)"
+        format_muted = ": (%volume)"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
