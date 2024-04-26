@@ -13,3 +13,4 @@
 !spotifyd/*
 !systemd/*
 !zathura/*
+!rofi/*
