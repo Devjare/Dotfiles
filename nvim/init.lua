@@ -33,7 +33,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { "pyright",  "java_language_server",  "tsserver" },
+	ensure_installed = { "pyright",  "java_language_server",  "tsserver", "lua_ls" },
 		handlers = {
 			function(server_name)
 				require('lspconfig')[server_name].setup({})

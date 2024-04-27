@@ -48,8 +48,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # brightnessctl to control brigthness.
- bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 5%-
- bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 5%+
+ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 2%-
+ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 2%+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -229,4 +229,11 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # EXEC POLYBAR
-exec --no-startup-id polybar 
+exec --no-startup-id polybar dev-1 2>&1 | tee -a /tmp/dev-1-polybar.log & disown
+
+# Move to scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+
+
