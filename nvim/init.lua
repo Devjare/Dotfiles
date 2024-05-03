@@ -23,10 +23,9 @@ require("remap")
 require("lazy").setup("plugins")
 
 require("configs.lsp-zero")
-require("configs.none-ls")
 require("configs.nvim-dap")
 
---  SETUP & LOAD THEME
+--  SETUP & LOAD tokyonight THEME
 -- Setup
 require("tokyonight").setup({
   -- use the night style
@@ -43,5 +42,18 @@ require("tokyonight").setup({
     colors.error = "#ff0000"
   end
 })
+-- require("tokyonight").setup({})
 -- Setup
-vim.cmd[[colorscheme tokyonight-storm]]
+vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme shado]]
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+
+local set = vim.opt -- set options
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+
+set.relativenumber = true
