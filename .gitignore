@@ -10,8 +10,6 @@
 !nvim/**/**/*.lua
 !picom/*
 !rofi/*
-!spotify/*
-!spotifyd/*
 !systemd/*
 !zathura/*
 !rofi/*
