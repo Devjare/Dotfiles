@@ -1,6 +1,7 @@
 # Ignore everything but my folders of interest
 *
 !*.gitignore
+!*.zshrc
 !*/
 !i3/*
 !i3status/*

@@ -19,7 +19,9 @@ require('mason-lspconfig').setup({
 			"mypy",
 			"lua-language-server",
 			"luaformatter",
-			"gopls"
+			"gopls",
+			"emmet-ls",
+			"tsserver"
 		}
 	}
 })
@@ -37,3 +39,18 @@ require('lspconfig').pyright.setup({{
 
 require('lspconfig').gopls.setup({})
 require('lspconfig').lua_ls.setup({})
+require('lspconfig').tsserver.setup({})
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+require('lspconfig').emmet_ls.setup({
+	capabilities = capabilities,
+	filetypes = { "css", "eruby", "html", "javascript", "javascriptreact",
+	"less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+	init_options = {
+		html = {
+			options = {
+				["bem.enabled"] = true,
+			},
+		},
+	}
+})

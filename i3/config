@@ -202,7 +202,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id feh --bg-fill ~/Pictures/anime-girl-purple.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Ulti.jpg
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf -b
 
 # I3-GAPS CONFIG
@@ -239,7 +239,6 @@ exec --no-startup-id polybar dev-1 2>&1 | tee -a /tmp/dev-1-polybar.log & disown
 # Move to scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-
-
+# set up in startup
 exec --no-startup-id "setxkbmap -layout us,es"
 exec --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle'"
